@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Keys</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="sub">
+        在这里保存你的 API Key（仅存本地/同步存储，不会自动上传）。
+      </p>
+
+      <section class="card">
+        <h2>Kimi / OCR</h2>
+
+        <div class="row">
+          <label for="kimiKey">Kimi API Key</label>
+          <div class="inputLine">
+            <input
+              id="kimiKey"
+              type="password"
+              placeholder="kimi-..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="ocrKey">OCR API Key</label>
+          <div class="inputLine">
+            <input
+              id="ocrKey"
+              type="password"
+              placeholder="ocr-..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button id="saveBtn" class="primary">保存（Save）</button>
+        <button id="clearBtn" class="danger">清空（Clear）</button>
+      </section>
+
+      <div id="status" class="status" aria-live="polite"></div>
+
+      <footer class="foot">
+        <span class="hint">提示：敏感信息别在公共电脑上保存。</span>
+      </footer>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

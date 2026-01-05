@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Paper Grader OCR→Kimi (Alt+K)",
+  "version": "2.0.0",
+  "description": "Alt+K crop screenshot -> OCR -> Kimi text model -> answers shown in a plain DIV.",
+  "permissions": ["activeTab", "scripting", "commands", "tabs", "storage"],
+  "host_permissions": [
+    "https://api.moonshot.cn/*",
+    "https://api.ocr.space/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "grade-visible": {
+      "suggested_key": { "default": "Alt+K" },
+      "description": "Crop screenshot -> OCR -> Kimi answers"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

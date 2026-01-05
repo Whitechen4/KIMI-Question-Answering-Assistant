@@ -1,4 +1,4 @@
-# KIMI-Question-Answering-Assistant
+# KIMI-Question-Answering-Assistant Browser extension
 KIMI-Question-Answering-Assistant  
 KIMI——问答助理  
 Alt+K crop screenshot -> OCR -> Kimi text model -> answers shown in a plain DIV. (Need use your own OCR and kimi api)  
